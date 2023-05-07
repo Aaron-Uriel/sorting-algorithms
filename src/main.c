@@ -9,7 +9,7 @@
 /* Constantes. */
 #define OPTS_LIMIT 4      /* Cantidad de opciones en el menú */
                           /* principal.                      */
-#define SORT_FUNC_LIMIT 1 /* Cantidad de algoritmos de       */
+#define SORT_FUNC_LIMIT 2 /* Cantidad de algoritmos de       */
                           /* ordenamiento.                   */
 
 /* Prototipos de funciones. */
@@ -26,7 +26,7 @@ void (*menu_options[OPTS_LIMIT])(void) = { fill_array, print_array,
     sorting_menu, exit_program};
 
 void (*sorting_functions[SORT_FUNC_LIMIT])(int [], int, int) = { 
-    quicksort,
+    quicksort, radixsort
 };
 
 /* El menú principal del programa. */
@@ -90,7 +90,7 @@ fill_array()
     }
     final_time = clock();
     delta_time = (double)(final_time - initial_time) / CLOCKS_PER_SEC;
-    printf("Creado un arreglo de %d elementos en %g milisegundos\n",
+    printf("Se creó un arreglo de %d elementos en %g milisegundos\n",
            size, delta_time * 1000);
 }
 
@@ -116,7 +116,8 @@ sorting_menu(void)
     do {
         printf("Ordenar arreglo.\n"
                 "¿Qué algoritmo de ordenamiento desea ejecutar?:\n");
-        printf("1.- Quicksort.\n");
+        printf("1.- Quicksort.\n"
+               "2.- Radixsort.\n");
 
         printf("Opción elegida: ");
         inputs = scanf("%d", &selected_opt);

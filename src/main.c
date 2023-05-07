@@ -1,16 +1,15 @@
 #include <stdio.h>
-#include <stdint.h>
 #include <time.h>
 
 #include <assert.h>
 
 #include "sort.h"
 
-void (*sorting_functions[])(int32_t *, int, int) = { 
+void (*sorting_functions[])(int [], int, int) = { 
     quicksort,
 };
 
-int32_t
+int
 main(void)
 {
     /* Prueba rápida de que todo funciona bien. */

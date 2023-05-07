@@ -2,9 +2,9 @@
 #include "utilities.h"
 
 void
-quicksort(int32_t array[], int32_t first, int32_t last)
+quicksort(int array[], int first, int last)
 {
-    int32_t i, j, pivot, pivot_index;
+    int i, j, pivot, pivot_index;
 
     /* Escogemos pivote. */
     pivot_index = (first + last) / 2;

@@ -9,7 +9,7 @@
 /* Constantes. */
 #define OPTS_LIMIT 4      /* Cantidad de opciones en el menú */
                           /* principal.                      */
-#define SORT_FUNC_LIMIT 2 /* Cantidad de algoritmos de       */
+#define SORT_FUNC_LIMIT 4 /* Cantidad de algoritmos de       */
                           /* ordenamiento.                   */
 
 /* Prototipos de funciones. */
@@ -26,7 +26,7 @@ void (*menu_options[OPTS_LIMIT])(void) = { fill_array, print_array,
     sorting_menu, exit_program};
 
 void (*sorting_functions[SORT_FUNC_LIMIT])(int [], int, int) = { 
-    quicksort, radixsort
+    quicksort, radixsort, exchange, selection, 
 };
 
 /* El menú principal del programa. */
@@ -117,7 +117,9 @@ sorting_menu(void)
         printf("Ordenar arreglo.\n"
                 "¿Qué algoritmo de ordenamiento desea ejecutar?:\n");
         printf("1.- Quicksort.\n"
-               "2.- Radixsort.\n");
+               "2.- Radixsort.\n"
+               "3.- Intercambio.\n"
+               "4.- Selección.\n");
 
         printf("Opción elegida: ");
         inputs = scanf("%d", &selected_opt);

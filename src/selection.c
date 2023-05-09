@@ -16,7 +16,7 @@ void selection(int  array[], int first, int last)
             }
             if (i != menor)
             {
-                swap(array[i], array[menor]);
+                swap(&array[i], &array[menor]);
             }
         }
     }

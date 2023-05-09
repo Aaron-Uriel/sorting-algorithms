@@ -11,7 +11,7 @@ void exchange(int  array[], int first, int last)
         {
             if (array[i] > array[j])
             {
-                swap(array[i], array[j]);
+                swap(&array[i], &array[j]);
             }
         } 
     }

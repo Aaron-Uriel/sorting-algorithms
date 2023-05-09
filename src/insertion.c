@@ -10,9 +10,9 @@ void insertion(int  array[], int first, int last)
         j = 1;
         aux = array[i];
         while (j > 0 && aux < array[i]){
-            a[j] = a[j-1];
+            array[j] = array[j-1];
             j--;
         }
-        a[j] = aux;
+        array[j] = aux;
     }
 }

@@ -3,9 +3,9 @@
 
 void exchange(int  array[], int first, int last)
 {
-    int i = first, j, n = last;
+    int i, j, n = last;
 
-    for (i; i <= n-2; i++)
+    for (i = first; i <= n-1; i++)
     {
         for (j = i+1; j <= n-1; j++)
         {

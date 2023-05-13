@@ -7,9 +7,9 @@ void insertion(int  array[], int first, int last)
 
     for (i = 1; i < n; i++)
     {
-        j = 1;
+        j = i;
         aux = array[i];
-        while (j > 0 && aux < array[i]){
+        while (j > 0 && aux < array[j-1]){
             array[j] = array[j-1];
             j--;
         }

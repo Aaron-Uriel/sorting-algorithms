@@ -26,7 +26,7 @@ void (*menu_options[OPTS_LIMIT])(void) = { fill_array, print_array,
     sorting_menu, exit_program};
 
 void (*sorting_functions[SORT_FUNC_LIMIT])(int [], int, int) = { 
-    quicksort, radixsort, exchange, selection, insertion, 
+    quicksort, radixsort, exchange, selection, insertion,
 };
 
 /* El menú principal del programa. */

@@ -3,7 +3,7 @@
 
 void exchange(int  array[], int first, int last)
 {
-    int i = first, j, n = last;
+    int i = 0, j, n = last + 1;
 
     for (i; i <= n-2; i++)
     {

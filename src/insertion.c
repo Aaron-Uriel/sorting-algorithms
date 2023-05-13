@@ -3,7 +3,7 @@
 
 void insertion(int  array[], int first, int last)
 {
-    int i, j, aux, n = last;
+    int i, j, aux, n = last + 1;
 
     for (i = 1; i < n; i++)
     {

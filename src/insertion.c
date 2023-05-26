@@ -1,7 +1,7 @@
 #include "sort.h"
 #include "utilities.h"
 
-void insertion(int  array[], int first, int last)
+void insertion(int array[], int first, int last)
 {
     int i, j, aux, n = last + 1;
 

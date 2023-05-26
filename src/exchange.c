@@ -1,7 +1,7 @@
 #include "sort.h"
 #include "utilities.h"
 
-void exchange(int  array[], int first, int last)
+void exchange(int array[], int first, int last)
 {
     int i = 0, j, n = last + 1;
 

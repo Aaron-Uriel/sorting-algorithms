@@ -7,10 +7,8 @@
 #include "utilities.h"
 
 /* Constantes. */
-#define OPTS_LIMIT 4      /* Cantidad de opciones en el menú */
-                          /* principal.                      */
-#define SORT_FUNC_LIMIT 5 /* Cantidad de algoritmos de       */
-                          /* ordenamiento.                   */
+#define OPTS_LIMIT      4   /* Cantidad de opciones en el menú principal.    */
+#define SORT_FUNC_LIMIT 5   /* Cantidad de algoritmos de ordenamiento.       */
 
 /* Prototipos de funciones. */
 void fill_array(void);
@@ -19,17 +17,18 @@ void sorting_menu(void);
 void exit_program(void);
 
 /* Globales. */
-int *array; /* El arreglo que usa el programa es global. */
+int *array;                 /* El arreglo que usa el programa es global.     */
 unsigned int array_size;
 
-void (*menu_options[OPTS_LIMIT])(void) = { fill_array, print_array,
-    sorting_menu, exit_program};
+void (*menu_options[OPTS_LIMIT])(void) = {
+    fill_array, print_array, sorting_menu, exit_program
+};
 
 void (*sorting_functions[SORT_FUNC_LIMIT])(int [], int, int) = { 
     quicksort, radixsort, exchange, selection, insertion,
 };
 
-/* El menú principal del programa. */
+/* Menú principal. */
 void main_menu() {
     unsigned int selected_opt, inputs;
     do {
@@ -91,7 +90,7 @@ fill_array()
     final_time = clock();
     delta_time = (double)(final_time - initial_time) / CLOCKS_PER_SEC;
     printf("Se creó un arreglo de %d elementos en %g milisegundos\n",
-           size, delta_time * 1000);
+            size, delta_time * 1000);
 }
 
 /* Imprime el arreglo usado en el programa. */
@@ -105,7 +104,7 @@ print_array(void)
     }
     printf("\n");
     printf("El arreglo está: %s\n", 
-           (is_sorted(array, array_size))?"ordenado": "no ordenado");
+            (is_sorted(array, array_size))? "ordenado": "no ordenado");
 }
 
 /* Maneja el menú para escoger el algoritmo de ordenamiento. */

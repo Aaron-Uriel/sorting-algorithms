@@ -4,7 +4,7 @@
 
 #include "sort.h"
 
-#define DIGITS 10 /* Cantidad de dígitos en un sistema decimal. */
+#define DIGITS 10   /* Cantidad de dígitos en un sistema decimal.            */
 
 int get_max(int array[], int size) {
     int max_number = 0;
